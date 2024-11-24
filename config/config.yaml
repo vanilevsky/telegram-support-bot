@@ -7,15 +7,15 @@ spam_cant_msg: 5
 
 parse_mode: 'Markdown' # Experimental. Do not change unless you know what you are doing. Options: Markdown/MarkdownV2/HTML
 
-allow_private: false # Allow / disallow option for staff to chat privately
+allow_private: true # Allow / disallow option for staff to chat privately
 direct_reply: false # Set this to true to just forward staff users to a user chat when allow_private
-auto_close_tickets: true # Close tickets after answering
-anonymous_tickets: true # Include userid in tickets or not
+auto_close_tickets: false # Close tickets after answering
+anonymous_tickets: false # Include userid in tickets or not
 anonymous_replies: true # Include staff member name in response
 show_auto_replied: false # Send auto replied msgs to staff chat
 show_user_ticket: false # Show ticket id to user
 autoreply_confirmation: true # Reply with language.confirmationMessage on each incoming message
-clean_replies: false # Remove footer and header from response
+clean_replies: true # Remove footer and header from response
 pass_start: false # Pass /start command to support directly
 
 signal_enabled: false # Enable/disable signal
