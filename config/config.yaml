@@ -1,0 +1,116 @@
+# bot settings
+bot_token: '{BOT_TOKEN_ENV}' # support bot token
+staffchat_id: '-1002402875970' # eg. -123456789
+owner_id: '149328'
+spam_time: 300000 # time (in MS) in which user may send 5 messages
+spam_cant_msg: 5
+
+parse_mode: 'Markdown' # Experimental. Do not change unless you know what you are doing. Options: Markdown/MarkdownV2/HTML
+
+allow_private: false # Allow / disallow option for staff to chat privately
+direct_reply: false # Set this to true to just forward staff users to a user chat when allow_private
+auto_close_tickets: true # Close tickets after answering
+anonymous_tickets: true # Include userid in tickets or not
+anonymous_replies: true # Include staff member name in response
+show_auto_replied: false # Send auto replied msgs to staff chat
+show_user_ticket: false # Show ticket id to user
+autoreply_confirmation: true # Reply with language.confirmationMessage on each incoming message
+clean_replies: false # Remove footer and header from response
+pass_start: false # Pass /start command to support directly
+
+signal_enabled: false # Enable/disable signal
+signal_number: '+12345689' # Your signal number / account
+
+web_server: false # Enable/disable web server
+web_server_port: 8080 # Port for web server
+
+dev_mode: false # Enable/disable dev mode
+
+# customize your language
+language:
+  startCommandText: 'Добро пожаловать в наш чат поддержки! Задайте свой вопрос здесь.'
+  faqCommandText: ''
+  helpCommandText: "*Доступные команды:* /help /faq /id"
+  helpCommandStaffText: "*Доступные команды:*\n
+    /start - Получить небольшое введение \n
+    /faq - Показать часто задаваемые вопросы \n
+    /open - *Персонал* Показать список открытых заявок \n
+    /reopen - *Персонал* Переоткрыть закрытую заявку \n
+    /close - *Персонал* Ответьте на заявку этим, чтобы закрыть и разблокировать \n
+    /clear - *Персонал* Закрыть все заявки \n
+    /ban - *Персонал* Забанить пользователя в чате \n
+    /unban - *Персонал* Разбанить пользователя"
+  confirmationMessage: "Спасибо за обращение к нам. Мы ответим как можно скорее."
+  blockedSpam: 'Вы отправили довольно много вопросов за последнее время. Пожалуйста, успокойтесь и дождитесь, пока их рассмотрит персонал.'
+  ticket: 'Заявка'
+  closed: 'закрыто'
+  acceptedBy: 'принято'
+  dear: 'Здравствуйте'
+  regards: 'С уважением,'
+  from: 'от'
+  language: 'Язык'
+  msg_sent: 'Сообщение отправлено пользователю'
+  file_sent: 'Файл отправлен пользователю'
+  usr_with_ticket: 'Пользователь с заявкой'
+  banned: 'забанен'
+  replyPrivate: 'Ответить в личном сообщении'
+  services: 'Выберите услугу из списка ниже'
+  customer: 'клиент'
+  msgForwarding: 'Ваши сообщения теперь будут пересылаться продавцам группы: '
+  back: 'Вернуться назад'
+  whatSubCategory: 'Какая подкатегория лучше всего описывает ваши потребности? '
+  prvChatEnded: 'Частный чат завершен.'
+  prvChatOpened: 'Открыт частный чат с клиентом.'
+  prvChatEnd: 'Завершить частный чат'
+  prvChatOpenedCustomer: 'Открыт частный чат'
+  instructionsSent: 'Инструкции были отправлены вам в личном чате.'
+  openTickets: 'Открытые заявки'
+  support: 'Поддержка'
+  prvChatOnly: 'Эту команду можно использовать только в личном чате.'
+  ticketClosed: 'Ваша заявка была закрыта нашим персоналом. Вы можете открыть новую заявку в любое время.'
+  links: 'Прямые ссылки на поддержку'
+  textFirst: 'Пожалуйста, отправьте нам сообщение перед отправкой изображения, чтобы мы могли лучше вам помочь.'
+  ticketClosedError: 'Вы не можете отвечать на закрытую заявку.'
+  automatedReply: 'Это автоматический ответ.'
+  automatedReplyAuthor: 'Бот Отдела Заботы.'
+  doesntHelp: 'Это не помогает.'
+  automatedReplySent: 'Автоматический ответ был отправлен пользователю.'
+  ticketReopened: 'Заявка переоткрыта.'
+  regardsGroup: 'Отдел Заботы — Королевская осанка'
+
+autoreply:
+  - question: 'install'
+    answer: "If you want to install the bot, you can use the following link: \
+      [Getting Started](https://github.com/bostrot/telegram-support-bot/wiki/Getting-started)  \
+      Alternatively you can also use our one-click setup & hosting service: \
+      [Botspace](https://botspace.bostrot.com/)"
+  - question: 'are you sure?'
+    answer: 'Yes.'
+# categories:
+#  - name: "Category1"
+#    subgroups:
+#    - name: "Sub1"
+#      group_id: "-12345678910"
+#    - name: "Sub2"
+#      group_id: "-12345678910"
+#    - name: "Sub3"
+#      group_id: "-12345678910"
+#  - name: "Category2"
+#    subgroups:
+#    - name: "Sub4"
+#      group_id: "-12345678910"
+#    - name: "Sub5"
+#      group_id: "-12345678910"
+#    - name: "Sub6"
+#      group_id: "-12345678910"
+#  - name: "Category with no subcategories"
+#    group_id: "-12345678910"
+#  - name: "Admin Chat"
+#    group_id: "-12345678910"
+#  - name: "Other issues"
+#    tag: "#other"
+#    msg: "Please specify your order number and describe the problem in as much detail as possible"
+#    group_id: "-12345678910"
+#  - name: "Contact"
+#    msg: "Check out our Website"
+
