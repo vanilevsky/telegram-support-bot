@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import { Context, Config } from './interfaces';
 import cache from './cache';
 
@@ -25,6 +27,11 @@ function createBot() {
       console.error('Please change your bot token in config/config.yaml');
       process.exit(1);
     }
+
+    if (cache.config.bot_token == '{BOT_TOKEN_ENV}') {
+      cache.config.bot_token = process.env.BOT_TOKEN_ENV;
+    }
+
     defaultBot = new TelegramAddon(cache.config.bot_token);
   }
   cache.config.autoreply_confirmation = cache.config.autoreply_confirmation === undefined ? true : cache.config.autoreply_confirmation
